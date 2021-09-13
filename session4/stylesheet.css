@@ -4,5 +4,16 @@ body {
     text-align: center;
 }
 /*I am not finished with this yet. I just have a lot to do right now.*/
-    
+div.soccer {
+    background-color: lightsalmon;
+}   
+
+div.drums {
+    background-color: darkgray;
+}
+
+
+
+
+
 }
