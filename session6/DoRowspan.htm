@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowspan Exercise</title>
+    <style>
+        td {border:1px solid black; text-align:center; width:150px}
+        table {border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;}
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Title</caption>
+        <tr style="background-color: lightgray;">
+            <td>Day</td><td>Group 1</td><td>Group 2</td><td>Avg</td><td>Overall Avg</td>
+        </tr>
+        <tr>
+            <td>Mon</td><td>80</td><td>78</td><td>79</td>
+        </tr>
+        <tr>
+            <td>Tue</td><td>81</td><td>85</td><td>83</td><td rowspan="3">88</td>
+        </tr>
+        <tr>
+            <td>Wed</td><td>96</td><td>90</td><td>93</td>
+        </tr>
+        <tr>
+            <td>Thu</td><td>99</td><td>95</td><td>97</td>
+        </tr>
+    </table>
+</body>
+</html>
