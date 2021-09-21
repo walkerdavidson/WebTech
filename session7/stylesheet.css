@@ -1,0 +1,112 @@
+body {
+    background-color: lightcyan;
+    font-family: Calibri;
+    text-align: center;
+}
+
+div.soccer {
+    background-color: lightsalmon;
+}   
+
+.originalNav a {
+     color: red;
+}
+
+.originalNav a:hover {
+     font-size: 120%;
+}
+
+
+header {
+     width: 100%;
+     position: sticky;
+     top: 0px;
+}
+
+header::after {
+     content: '';
+     display: table;
+     clear: both;
+}
+
+.navBar a, .navBar li{
+     width:100%;
+     float: left;
+     color: blue;
+     text-decoration: none;
+     text-transform: uppercase;
+}
+
+.navBar li.sub-menu .sub-menu-content {
+     display: none;
+     min-width: 100px;
+     position: absolute;
+     margin-top: 10px;
+
+}
+
+li.sub-menu:hover .sub-menu-content {
+     display: block;
+     background-color: #ccc;
+     padding: 5px;
+     text-align: left;
+     z-index: 10;
+}
+
+.navBar ul {
+     background-color: #aaa;
+     width: 100%;
+     display: flex;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-align: center;
+     overflow: auto;
+}
+
+.navBar li {
+     margin-left: 30px;
+     margin-right: 70px;
+     padding: 10px;
+}
+
+li:hover + .sub-menu-content {
+     display: block;
+     position: relative;
+     text-align: left;
+     background-color: #ccc;
+}
+
+.navBar li:hover, .navBar a:hover {
+     background-color: lightcyan;
+}
+
+/*
+.navBar {position: sticky; top: 0px; left: 0px; width: 100%;}
+.navBar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgb(50, 50, 50); border-radius: 5px;}
+.navbar li {float: left;}
+.navBar li a {
+     display: inline-block; 
+     color: white; 
+     text-align: center; 
+     padding: 15px; 
+     text-decoration: none; 
+     min-width: 100px; 
+     font-weight:lighter;}
+.navBar a.Active {
+     background-color: darkred;}
+.navBar li a:hover, .navBar a.Active:hover {
+     background-color: red;}
+.navBar .sub-menu-content {
+     display: none; 
+     position: absolute; 
+     background-color: rgb(50, 50, 50); 
+     min-width: 100px; 
+     z-index: 1; }
+     
+.navBar .sub-menu-content a {
+     display: block; 
+     text-align: left;}
+.navBar li.sub-menu:hover .sub-menu-content {
+     display: block;}
+*/
