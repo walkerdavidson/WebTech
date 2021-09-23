@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MIS3690 Survey</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style>
+	td {padding-right:40px}
+	</style>
+
+</head>
+<body>
+	<h1>MIS3690 Student Survey</h1>	
+	<p>Please complete the following survey.  You must answer each question.  When you are done,
+	please click on the Submit button.</p>
+	<form method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
+		<fieldset><legend>Practice Form</legend>
+		<table>
+			<tr>
+				<td><p>First Name: <input type="text" name="firstname" maxlength="25" /></p></td>
+				<td><p>Last Name: <input type="text" name="lastname" maxlength="50" /></p></td>
+	</tr>	
+	</table>
+		<p>Gender : 
+			Male <input type="radio" name="gender" value="male" />
+			Female <input type="radio" name="gender" type="radio" />
+		</p>
+		<p>What grade do you expect to receive? <select name="grade">
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="F">F</option>
+		</select></p>
+		<table>
+		<tr>
+			<td>
+				<p>Which products do you own (Select all that apply)<br/> 
+			</td>   
+			<td><input type="checkbox" name="images" value="images"/>Images<br/>
+			<input type="checkbox" name="css" value="css"/> CSS<br/>
+			
+			<input type="checkbox" name="tables" value="table"/>Tables 
+			<br/>
+			<input type="checkbox" name="forms" value="forms"/>Forms</p></td> 
+		</tr>
+		</table>
+		<p>Please enter any comments you have</p><textarea name="comments" rows="10" cols="50" ></textarea>
+	
+		<br/>
+		<br/>
+
+		<input type="submit" value="Submit" name="Submit" style="margin-right:50px"/>
+		<input type="reset" value="Reset" name="Reset" />
+	</fieldset>
+	</form>
+
+
+
+</body>
+</html>
