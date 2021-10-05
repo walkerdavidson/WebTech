@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <title>All About Walker</title>
+    <style>
+      body {font-size: 20px;
+        margin-left: 10%;
+        margin-right:10%;}
+      h1 {font-weight: bold; 
+        text-align: center; 
+        color: rgb(138, 138, 138); 
+        padding: 5px; 
+        border-width: 5px; 
+        border-color: black;
+        border-style: dashed;
+        margin-left: 30%;
+        margin-right: 30%;
+        cursor:pointer;}
+      img {padding: 5px; 
+        border-width: 5px; 
+        border-color: lightpink; 
+        border-style: solid;
+        float: left;}
+      span {font-size: 50px; font-style: italic;
+            text-shadow: 5px 5px 5px black;}
+       
+    </style>
+    <script>
+
+      function ChgStyle()
+      {
+       document.getElementById("myh1").style.color="green";
+       document.getElementById("myh1").style.font="30pt 'Comic Sans MS'";
+       document.getElementById("myh1").style.textAlign="center";
+      } 
+   
+      function ImgChg()
+      {
+        document.getElementById("photoWalker").src="TestPhoto.jpg";
+      }
+      
+      function undo()
+      {
+        document.getElementById("photoWalker").src="WalkerPhoto.jpg";
+      }
+
+
+     </script>	
+
+</head>
+<body>
+  <h1 id="myh1" onclick="ChgStyle()" style= "color: #8f68ff;">I am <span>Walker Davidson</span></h1>
+  <img id="photoWalker" src="img/WalkerSenior(119of85)COPY.jpg" 
+   
+  onmouseover="ImgChg()" onmouseout="undo()"
+  usemap="#walkerPhoto" alt="Walker's Senior Photo" width="700"/>
+  <!--<map name="walkerPhoto">
+      <area target="_self" alt="Interests" title="Learn About Walker" href="interests.html" coords="150,48,306,278" shape="rect"/>
+      <area target="_blank" alt="Ponce" title="Where this photo was taken" href="https://www.poncecitymarket.com" coords="0,0,149,278" shape="rect"/>
+    </map>-->
+  <hr>  
+  <p>I am from Stockbridge, Georgia. The best way to contact me is via phone at 678-588-0517.</p>  
+    <hr>
+  <p>I am a <i>first semester</i> sophomore and I came in without any credits.<br> I need to learn how to code a website for a venture I am currently working on.</p>
+  <hr>
+  <a href="interests.html">Learn more about Walker</a>
+</body>
+</html>
