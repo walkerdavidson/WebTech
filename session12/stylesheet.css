@@ -1,0 +1,13 @@
+body {
+    background-color: lightcyan;
+    font-family: Calibri;
+    text-align: center;
+}
+
+div.soccer {
+    background-color: lightsalmon;
+}   
+
+div.drums {
+    background-color: darkgray;
+}
