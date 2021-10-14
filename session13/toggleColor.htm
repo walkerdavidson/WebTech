@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+	<title>InnerHTML JS Example</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<script>
+	function chgColor()
+	{
+		text1=document.getElementById("p1");
+		if (text1.style.color=="blue")
+		{
+			text1.style.color="red";
+		}
+		else{
+			text1.style.color="blue";
+		}
+	}
+	</script>
+	
+</head>
+<body>
+	<p style="color:blue; font-size:30pt" onmouseover=chgColor() id="p1">When the user mouses over this paragraph, its color should change</p>
+</body>
+</html>
