@@ -21,19 +21,31 @@
 
 		function chgHead()
 		{
-			if (document.getElementById("fz").value == "L") 
+			if (document.getElementById("l").checked) 
 			{
 				document.getElementById("myh1").style.fontSize = "30pt";
 			}
-			else (document.getElementById("fz").value == "S") 
+			if (document.getElementById("s").checked)  
 			{
 				document.getElementById("myh1").style.fontSize = "18pt"; 
 			}
-			else
+		}
+
+		function toggle()
+		{
+			x = document.getElementById("b");
+			if (x.style.backgroundColor = "green")
 			{
-				document.getElementById("myh1").style.fontSize = "24pt";
+				x.style.backgroundColor = "red";
+				document.getElementById("pw").value = "dolphins";
+			}
+			else (x.style.backgroundColor = "red")
+			{
+				x.style.backgroundColor = "green";
+				document.getElementById("pw").value = "redsox";
 			}
 		}
+
 
 	</script>
   </head>
@@ -44,9 +56,9 @@
 	<hr />
 	<p>Enter password: <input id="pw" type="text" name="pw" /><br />
 		<button onclick=pwbc()>Login</button></p>
-	<p>H1 Font Size: Large: <input onclick=chgHead() id="fz" type="radio" name="fz" value="L"/> Small <input onclick=chgHead() id="fz" type="radio" name="fz" value="S" /></p>
+	<p>H1 Font Size: Large: <input onclick=chgHead() id="l" type="radio" name="fz" value="L"/> Small <input onclick=chgHead() id="s" type="radio" name="fz" value="S" /></p>
 	<p>
-		<button>Toggle Page Background Color</button>
+		<button onclick=toggle()>Toggle Page Background Color</button>
 	</p>
   </body>
 </html>
