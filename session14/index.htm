@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MIS3690 Survey</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style>
+	td {padding-right:40px}
+	</style>
+	<script>
+		function processForm()
+		{
+			if (document.getElementById("fName").value=="")
+			{
+				alert("First Name is Required");
+				document.getElementById("fName").focus();
+				return false;
+			}
+			if (document.getElementById("lName").value=="")
+			{
+				alert("Last name is required");
+				document.getElementById("lName").focus();
+				return false;
+			}
+			var jsimage=document.getElementById("image")
+			var jscss=document.getElementById("css")
+			var jstable=document.getElementById("table")
+			var jsforms=document.getElementById("forms")
+			if (jsimage.checked == false && jscss.checked == false && jstable.checked == false && jsforms.checked == false)
+			{
+				alert("Please select a topic");
+				document.getElementById("fun").focus();
+				return false;
+			}
+			
+			var jsyog=document.getElementById("YearofGrad")
+			if (jsyog.value > 2024 || jsyog.value < 2021)
+			{
+				alert("Oh no! You're broken");
+				document.getElementById("YearofGrad").focus();
+				return false
+			}
+			else
+			{
+				return true
+			}
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<h1>MIS3690 Student Survey</h1>	
+	<p>Please complete the following survey.  You must answer each question.  When you are done,
+	please click on the Submit button.</p>
+	<form method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php" id="form" onsubmit="return processForm()">
+		<fieldset><legend>Practice Form</legend>
+		<table>
+			<tr>
+				<td><p>First Name: <input id="fName" type="text" name="firstname" maxlength="25" /></p></td>
+				<td><p>Last Name: <input id="lName" type="text" name="lastname" maxlength="50" /></p></td>
+	</tr>	
+	</table>
+		<p>Gender : 
+			Male <input type="radio" name="gender" value="male" />
+			Female <input type="radio" name="gender" type="radio" />
+		</p>
+		Year of Graduation: <input id="YearofGrad" type="text" name="YoG" value="2020" />
+		<p>What grade do you expect to receive? <select name="grade">
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="F">F</option>
+		</select></p>
+		<table>
+		<tr>
+			<td>
+				<p id="fun">Which topics did you find to be fun?<br/> 
+			</td>   
+			<td><input id="image" type="checkbox" name="images" value="images"/>Images<br/>
+			<input id="css" type="checkbox" name="css" value="css"/> CSS<br/>
+			
+			<input id="table" type="checkbox" name="tables" value="table"/>Tables 
+			<br/>
+			<input id="forms" type="checkbox" name="forms" value="forms"/>Forms</p></td> 
+		</tr>
+		</table>
+		<p>Please enter any comments you have</p><textarea name="comments" rows="10" cols="50" ></textarea>
+	
+		<br/>
+		<br/>
+
+		<input type="submit" value="Submit" name="Submit" style="margin-right:50px"/>
+		<input type="reset" value="Reset" name="Reset" />
+	</fieldset>
+	</form>
+
+
+
+</body>
+</html>
