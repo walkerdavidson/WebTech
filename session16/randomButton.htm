@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rand</title>
+    <style>
+        button {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+
+    <script>
+        var message = new Array("Click Me", "Move Me", "Click Here", "Button", "Next");
+        var colorList = new Array("red", "orange", "yellow", "green", "blue", "purple");
+        
+        var timer = null
+        if (!timer) timer=setInterval("move()", 750)
+        
+        function move()
+        {
+            var x = Math.floor(Math.random()*501);
+            var y = Math.floor(Math.random()*501);
+            document.getElementById("push").style.left = x + "px";
+            document.getElementById("push").style.top = y + "px";
+        
+            /*CHANGES THE WORDS*/
+            document.getElementById("push").innerHTML=message[Math.floor(Math.random()*message.length)]
+            document.getElementById("push").style.backgroundColor=colorList[Math.floor(Math.random()*colorList.length)]
+        }
+
+        function stopAnimation() 
+        {
+            if (!timer) return false;
+            clearInterval(timer);
+            timer = null;
+        }
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <button id="push" onclick="stopAnimation()">
+        Click Me
+    </button>
+</body>
+</html>

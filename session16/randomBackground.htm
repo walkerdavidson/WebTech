@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+<head>
+	<title>Random Background Color</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<script>
+	
+	function selectBGcolor() 
+	{
+		var bgColors = new Array("green","yellow","blue","pink","red","orange");
+		document.getElementById("bod").style.backgroundColor=bgColors[Math.floor(Math.random()*bgColors.length)];
+		setTimeout("selectBGcolor()", 500)
+	}
+
+	
+
+	</script>	
+</head>
+<body id="bod" onload="selectBGcolor()">
+	<h1>Refresh this page</h1>
+</body>
+</html>
