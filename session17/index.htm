@@ -14,14 +14,14 @@
 	function chgButton() 
 	{
 		var randIndex = Math.floor(Math.random()*5);
-		var randColor = Math.floor(Math.random()*8);
+		var randColor = Math.floor(Math.random()*7);
 		var rand1 = Math.floor(Math.random()*500);
 		var rand2 = Math.floor(Math.random()*500);
 		var b = document.getElementById("btn");
 		if (caught==0)
 		{
 		b.innerHTML=btnWords[randIndex];
-		b.style.backgroundColor= colors[randColor]);
+		b.style.backgroundColor=colors[randColor]);
 		b.style.top=rand1+"px";
 		b.style.left=rand2+"px";
 		setTimeout("chgButton()",750)
