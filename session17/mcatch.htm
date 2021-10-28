@@ -13,12 +13,10 @@
 	<script>
 	
 	var btnWords = new Array("Click Me","Move Me","Click Here","Button","Next");
-	var colors = new Array("red", "orange", "yellow", "green", "blue", "indigo", "purple")
 	var caught=0;
 	function chgButton() 
 	{
 		var randIndex = Math.floor(Math.random()*5);
-		var randColor = Math.floor(Math.random()*7);
 		var rand1 = Math.floor(Math.random()*301);
 		var rand2 = Math.floor(Math.random()*301);
 		var b = document.getElementById("btn");
@@ -27,7 +25,6 @@
 		b.innerHTML=btnWords[randIndex];
 		b.style.top=rand1+"px";
 		b.style.left=rand2+"px";
-		b.style.backgroundColor= colors[randColor]);
 		setTimeout("chgButton()",750)
 		}
 		else
