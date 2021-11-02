@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<title>Canvas</title>
+	<style>
+		h1, h3 {
+			text-align: center;
+		}
+		canvas {
+			border: 1px solid black;
+			text-align: center;
+		}
+	</style>
+	<script>	
+		var startX;
+		var startY;
+		var begin = true;
+		function draw()
+		{
+			var canvas = document.getElementById('canva');
+			// use getContext to use the canvas for drawing
+			var ctx = canvas.getContext('2d');
+			// Draw shapes
+			ctx.beginPath();
+			ctx.fillStyle="#fff"
+			ctx.fillRect(0,0,1000,600); // Outer circle
+			ctx.beginPath();
+			ctx.fillStyle="green"
+			ctx.fillRect(0,500,1000,600)
+			ctx.fillStyle="#af0355"
+			ctx.fillRect(500, 250, 400, 300)
+			var ctx = canvas.getContext('2d');
+			ctx.fillStyle="#a42f00"
+			ctx.beginPath();
+			ctx.moveTo(475, 250);
+			ctx.lineTo(925, 250);
+			ctx.lineTo(700, 25);
+			ctx.fill();
+			
+			ctx.beginPath();
+			ctx.arc(150,150,75,0,Math.PI*2,true);
+			ctx.fillStyle="yellow";
+			ctx.fill()
+			
+
+			
+			
+			
+		}
+		
+
+	
+	</script>	
+</head>
+<body onload=draw()>
+	<h1>Welcome to Canvas!</h1> 
+	<h3>Draw whatever you would like below!</h3>
+	<div>
+		<canvas id="canva" width="1000" height="600"></canvas>	
+	</div>
+	
+</body>
+</html>
