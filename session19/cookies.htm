@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+
+    <style>
+
+    </style>
+    <script>
+        var curDate = new Date();
+
+        function showDateTime()
+        {
+            var mytime = document.getElementById("time");
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var d=today.toDateString();
+            // add a zero in front of minutes < 10
+            if (m < 10)
+            {
+                m = "0"+m
+            }
+            
+            // display the time as AM or PM and the hour as 12 if it's 0
+            if (h == 0)
+            {
+                timeString = "12:" + m + " AM"
+            }
+            else if (h < 12)
+            {
+                timeString = h+":"+m+" AM"
+            }
+            else if (h == 12)
+            {
+                timeString = "12:"+m+" PM"
+            }
+            else
+            {
+                timeString = (h-12) + ":" + m + " PM"
+            }
+            document.getElementById("date").innerHTML="Your Last Visit Was on"
+            setTimeout("showDateTime()",60000);
+        }
+        
+        function setCookie(lastVisit, curDate)
+        {
+            //Get today's date
+            var today = new Date()
+            
+            //Create a date 1 year from now
+            var expireDate = 
+                new Date(today.getFullYear()+1, today.getMonth(), today.getDate())
+            
+            //Create a new cookie that exprires a year from now
+            document.cookie = lastVisit + "=" + curDate + 
+            ";expires="+ expireDate.toGMTString() 
+        }
+
+        function readCookie(lastVisit)
+        {
+            c=document.cookie  //Gets all cookies in the document
+            var s=c.indexOf(lastVisit) //s is the index of the start of the desired cookie
+            if (s==-1) return null;
+            var cs=c.substring(s) //Cut the cookie string at the start of the desired cookie
+            var e=cs.indexOf(";") //e is the index of the end of the desired cookie
+            //If there are multiple cookies, cut off the others
+            if (e != -1) {
+            cs = cs.substring(0,e)
+            }
+            //Find and return the value of the desired cookie
+            cookieParts=cs.split("=")
+            return cookieParts[1]
+        }
+
+
+        function cookie()
+        {
+            mybody=document.getElementById("bodytag");
+            if (readCookie("lastVisit") == null)
+            {
+                document.getElementById("new").innerHTML = "First Visit"
+            }
+        }
+            
+	    
+    </script>
+//Write your own function for if's and put in body tag.
+</head>
+<body id="bodytag" onload=showDateTime()>
+    <p id="answer"></p>
+    <p id="new"></p>
+    <p id="todayDate"></p>
+    
+</body>
+</html>

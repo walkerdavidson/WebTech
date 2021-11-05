@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times</title>
+
+    <style>
+
+    </style>
+    <script>
+        var curDate = new Date();
+
+        function calcAge()
+        {
+            // Get birthday month from the form.  Call it m.
+            var m = document.getElementById("mo").value - 1;  
+            // Get birthday day from the form.  Call it d.
+            var d= document.getElementById("day").value;
+            
+            var y= document.getElementById("yr").value;
+            // Create variable birthday as your birthday this year
+            var curYear = curDate.getFullYear()
+            var birthday = new Date(y,m,d)
+
+            // Calculate how many milliseconds til your birthday this year (negative if birthday is past)
+            var dif = birthday - curDate
+
+            // If you've already had your birthday, calculate milliseconds til your birthday next year
+            if (dif < 0)
+            {
+                birthday = new Date(y, m, d)
+                dif = curDate - birthday
+               
+            }
+
+            // Convert milliseconds to days.  Dif is how many days to your next birthday
+            dif = dif/(60*60*24*1000)
+            // Drop the fraction and add 1 (if there are 0.8 days to your birthday, it is really 1 day)
+            dif = 1+Math.floor(dif);
+            dif = Math.floor(dif/365)
+            // Put the answer on the page between the <span> and </span>
+            document.getElementById("answer").innerHTML = "You are "+dif+" years old."
+        }
+
+        function showDateTime()
+        {
+            var mytime = document.getElementById("time");
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var d=today.toDateString();
+            document.getElementById("date").innerHTML = d;
+            // add a zero in front of minutes < 10
+            if (m < 10)
+            {
+                m = "0"+m
+            }
+            
+            // display the time as AM or PM and the hour as 12 if it's 0
+            if (h == 0)
+            {
+                timeString = "12:" + m + " AM"
+            }
+            else if (h < 12)
+            {
+                timeString = h+":"+m+" AM"
+            }
+            else if (h == 12)
+            {
+                timeString = "12:"+m+" PM"
+            }
+            else
+            {
+                timeString = (h-12) + ":" + m + " PM"
+            }
+            document.getElementById("time").innerHTML = timeString;
+            setTimeout("showDateTime()",60000);
+        }
+        
+        function setCookie(lastVisit, curDate)
+        {
+            //Get today's date
+            var today = new Date()
+            
+            //Create a date 1 year from now
+            var expireDate = 
+                new Date(today.getFullYear()+1, today.getMonth(), today.getDate())
+            
+            //Create a new cookie that exprires a year from now
+            document.cookie = lastVisit + "=" + curDate + 
+            ";expires="+ expireDate.toGMTString() 
+        }
+
+        function readCookie(lastVisit)
+        {
+            c=document.cookie
+            //Find the start of the desired cookie
+            var s=c.indexOf(lastVisit)
+            //Cut the cookie string at the start of the desired cookie
+            var cs=c.substring(s)
+            //If multiple cookies, find the end of the desired cookie
+            var e=cs.indexOf(";")
+            //If there are multiple cookies, cut off the others
+            if (e != -1) {
+                cs = cs.substring(0,e)
+            }
+            //Find and return the value of the desired cookie
+            cookieParts=cs.split("=")
+            return cookieParts[1]
+        }
+
+
+        function cookie()
+        {
+            mybody=document.getElementById("bodytag");
+            if (readCookie("lastVisit") == "")
+            {
+                document.getElementById("new").innerHTML = "First Visit"
+            }
+        }
+            
+	    
+    </script>
+
+</head>
+<body id="bodytag" onload="cookie()">
+    <h2>Calculate My Age</h2>
+    <p>Enter your birthday below (MM/DD/YYYY)</p>
+	<p>Month <input type="text" name="mo" id="mo" size="2" />&nbsp;&nbsp;&nbsp;&nbsp;
+	Day <input type="text" name="day" id="day" size="2" />&nbsp;&nbsp;&nbsp;&nbsp;
+    Year <input type="text" name="yr" id="yr" size="4" />&nbsp;&nbsp;&nbsp;&nbsp;</p>
+	<p><button type="button" onclick="calcAge()">Calculate</button></p>
+	
+    <p id="answer"></p>
+</body>
+</html>
