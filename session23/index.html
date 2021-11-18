@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <title>All About Walker</title>    
+    <style>
+      body {font-size: 20px;
+        margin-left: 10%;
+        margin-right:10%;
+        background-color: lightcyan;}
+      h1 {font-weight: bold; 
+        text-align: center; 
+        color: rgb(138, 138, 138); 
+        padding: 5px; 
+        border-width: 5px; 
+        border-color: black;
+        border-style: dashed;
+        margin-left: 30%;
+        margin-right: 30%;}
+      img {padding: 5px; 
+        border-width: 5px; 
+        border-color: lightpink; 
+        border-style: solid;
+        float: left;}
+      span {font-size: 50px; color: red; font-style: italic;
+            text-shadow: 5px 5px 5px black;} 
+      .fun {
+        text-align: justify;
+        font-size: larger;
+        color:white;
+      } 
+      
+    </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function(){
+        // jQuery methods go here...
+        $("#button").click(function(){
+          $("#photo").slideUp("fast");
+          $("#phone").html("911");
+          $("#phone").append(". Please don't try this");
+          $("#fix").html("Get Pranked");
+          $("#fix").delay(1000).fadeOut(1000);
+          $("#i").remove();
+          $("#fun").addClass("fun");
+          $("#fun").animate({fontSize: '2em'}, "slow");
+        });
+      });
+    </script>
+
+</head>
+<body>
+  <h1 id="header" style= "color: #8f68ff;">I am <span>Walker Davidson</span></h1>
+  <img id="photo" src="img/WalkerSenior(119of85)COPY.jpg" usemap="#walkerPhoto" alt="Walker's Senior Photo" width="700"/>
+  <map name="walkerPhoto">
+      <area target="_self" alt="Interests" title="Learn About Walker" href="interests.html" coords="150,48,306,278" shape="rect"/>
+      <area target="_blank" alt="Ponce" title="Where this photo was taken" href="https://www.poncecitymarket.com" coords="0,0,149,278" shape="rect"/>
+    </map>
+  <hr>  
+  <p id="fun">I am from Stockbridge, Georgia. The best way to contact me is via phone at <span id="phone">678-588-0517</span>.</p>  
+    <hr>
+  <p>I am a <i id="i">first semester</i> sophomore and I came in without any credits.<br> I need to learn how to code a website for a venture I am currently working on.</p>
+  <hr>
+  <a href="interests.html">Learn more about Walker</a>
+  <br>
+  <button id="button">Break This Site</button>
+  <button id="fix">Fix the Site</button>
+</body>
+</html>
