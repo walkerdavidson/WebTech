@@ -1,219 +1,101 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tal is the new, anonymous mental health app made so that you always have someone to talk to."/>
-    <meta name="keywords" content="Tal, The Tal App, anonymous mental health app, mental health, talk to someone, someone to talk to, talk, anonymous app"/>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">   
-    <title>Tal</title>
-    <Style>
-        /* Navigation */
-        header {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            background-color: transparent;
-            z-index: 10;
-            position: absolute;
-            box-shadow: none;
-            margin-left: 15%
-        }
+  <title>Bootstrap Case</title> 
+  <!--  Bootstrap2.htm -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <style>
+    div.container img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
 
-        nav {
-            background: transparent;
-        }
-
-        .has-sub-menu ul {
-            margin-top: 0px;
-        }
-
-        nav ul li { 
-            display: inline-block;
-            background: transparent;
-            margin: 0 75px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            line-height: 35px;
-            font-size: 24px;
-            padding: 1px 10px;
-            font-weight: 600;
-        }
-
-        /*The list itself but not the content*/
-        .sub-menu-content {
-            background-color: transparent;
-        } 
-
-        nav ul ul {
-            /*width: 175px;
-            position: fixed; /*Holds sublist in place*/
-            top: 60px;
-            display: none;
-            float: left;
-            text-align: left;
-            margin-left: -40px; 
-        }
-
-        nav ul + ul a {
-            margin-top: 0px;
-        }
-
-        nav ul ul a {
-            font-weight: 400;
-            font-size: 18px;
-        }
-
-        nav ul li:hover > ul {
-            display: block;
-        }
-
-        nav ul ul li {
-            position: relative;
-            margin: 0px;
-            width: 150px;
-            float: none;
-            display: list-item;
-        }
-        
-        #video-background video{
-            width: 99vw;
-
-            position: static;
-            z-index: -1;
-        }
-
-        div#dlb {
-            position: absolute;
-            top: 44%;
-            width: 100vw;
-            margin: 0px auto;
-        }
-
-        button {
-            max-width: 30%;
-            border-radius: 50px;
-            position: absolute;
-            background-color: #6effeb;
-            font-family: 'Libre Franklin';
-            font-weight: 400;
-            left: 36.5%;
-            font-size: 28px;
-            padding: 32px 133px;
-        }
-
-        button:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        button a {
-            text-decoration: none;
-            color: #555;
-
-        }
-
-        body {
-            margin: 0px;
-        }
-
-    </Style>
-    <script>
-        function app()
-        {
-            window.open("https://apps.apple.com/us/app/tal/id1563285201")
-        }
-    </script>
-</head>
-<!--
-    Additions: Resources page is a resting page for links and contains new information for emergencies. This does not count as a main content page.
-    Deletions: I have removed who we are partnered with as we are only partnered with 1 social media page. I replaced this information with the cost structure for groups.
-    <table> can be found on the contact_us.htm page under div#topic.
-    <li> requirement can be found on each page under <header> <nav> and there is a double indented sublist on suicide.htm under p#sui-para1.
-    <input type=checkbox> and <select> can be found on contact_us.htm.
-    <image> <map> can be found on the bottom of each page under footer #footer-top #sm.
-    <video> can be found on index.htm.
-    <audio> can be found on anxiety.htm under p#anx-para-2 div.music.
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $("#1").text("This is paragraph #1")
+      $("#img1").click(function(){
+        $(this).attr("src", "PinkBlueTalLogo.png")
+      })
     
+    
+    
+    })
 
+  </script>
 
-
--->
+</head>
 <body>
-
-<header>
-    <nav>
-        <ul id="navBar" class="menu">
-            <li id="main-menu-item1" class="main-menu" >
-                <a href="who_we_are.htm">Who We Are</a>
-            </li>
-            <li id="main-menu-item2" class="main-menu has-sub-menu"><a href="resources.htm">Resources</a>
-                <ul id="sub-menu-resources" class="sub-menu-content">
-                    <li><a href="anxiety.htm">Anxiety</a></li>
-                    <li><a href="depression.htm">Depression</a></li>
-                    <li><a href="covid-19.htm">COVID-19</a></li>
-                    <li><a href="suicide.htm">Suicide</a></li>
-                </ul>
-            </li>
-            <li id="main-menu-item3" class="main-menu has-sub-menu">
-                <a href="join_us.htm">Join Us</a>
-                <ul id="sub-menu-join-us" class="sub-menu-content">
-                    <li><a href="ambassadors.htm">Ambassadors</a></li>
-                    <li><a href="partnerships.htm">Partnerships</a></li>
-                </ul>
-            </li> 
-        </ul>
-    </nav>
-</header>
-   
-<div id="video-background" class="background-content">
-    <video muted loop autoplay id="Tal_bg_vid" >
-        <source src="Tal_AnimatedBackground.mp4" type="video/mp4">
-    </video>
-</div>
-
-<div id="dlb">
-    <button id="download" onclick=app()>
-        Download
-    </button>
-</div>
-
-<footer>
-        
-    <div class="footer-top">
-        <div id="sm">
-            <img id="socialMedia" src="media.png" alt="Social Media" usemap="#social">
-                    <map name="social" style="position: absolute;">
-                        <area shape="circle" coords="37,37,37" alt="Facebook" href="https://www.facebook.com/TheTalApp/">
-                        <area shape="circle" coords="125,37,37" alt="Instagram" href="https://www.instagram.com/thetalapp/?hl=en">
-                        <area shape="circle" coords="213,37,37" alt="LinkedIn" href="https://www.linkedin.com/company/the-tal-app/">
-                    </map>
-        </div>            
-        <ul>
-            <li><a href="about_the_founders.htm">About the Founders</a></li>
-            <li><a href="contact_us.htm">Contact Us</a></li>
-            <li><a href="credits.htm">Credits</a></li>
-        </ul>
-        
-    </div>
-
-    <div class="footer-bottom">
-        <ul>
-            <li><a href="terms_and_conditions.htm">Terms & Conditions</a></li>
-            <li><a href="privacy_policy.htm">Privacy Policy</a></li>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+            </ul>
+          </li>
+          <li><a href="http://www.babson.edu">Babson</a></li>
+          <li><a href="http://www.amazon.com">Amazon</a></li>
         </ul>
     </div>
-</footer>
+  </nav>
 
+  <div class="container">
+    <div class="jumbotron">  
+      <h1>My first Bootstrap website!</h1>
+      <p>This is going to be a subtitle </p>
+    </div>
+      <div class="row">  
+        <div class="col-sm-3" style="background-color: red">
+          <p id="1">This is first paragragh.</p>
+          <p>This is second paragraph.</p>
+        </div>
+        <div class="col-sm-5" style="background-color: blue">
+          <p>This is third paragraph.</p>
+          <p>This is fourth paragraph.</p>
+        </div>
+        <div class="col-sm-4" style="background-color: gold">
+          <p>This is fifth paragraph.</p>
+        </div>
+      </div>
+      <div class="row">  
+        <div class="col-sm-6" style="background-color: orange">
+          <p>This is sixth paragragh.</p>
+          <p>This is seventh paragraph.</p>
+        </div>
+        <div class="col-sm-3" style="background-color: cyan">
+          <p>This is eighth paragraph.</p>
+          <p>This is ninth paragraph.</p>
+        </div>
+        <div class="col-sm-3" style="background-color: yellow">
+          <p>This is tenth paragraph.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4" style="background-color: salmon;">
+          <img id="img1" src="GreenBlueTalLogo.png" alt="logo">
+        </div>
+        <div class="col-sm-4" style="background-color: silver;">
+          <img id="img2" src="PinkBlueTalLogo.png" alt="logo">
+        </div>
+        <div class="col-sm-4" style="background-color: green;">
+          <img src="YellowGreenTalLogo.png" alt="logo">
+        </div>
+      </div>
+  </div>
 
 </body>
 </html>
