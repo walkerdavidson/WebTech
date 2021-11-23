@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+
+/* Navigation */
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 2px -2px white;
+}
+
+header img {
+  width: 118px;
+}
+
+nav {
+  background: white;
+}
+
+nav:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav ul {
+  list-style: none;
+  margin-right: 0px;
+  position: relative;
+}
+
+nav ul li { 
+  display: inline-block;
+  background: white;
+  margin: 0 50px;
+}
+
+.has-sub-menu ul {
+  margin-top: 0px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: 'Libre Franklin';
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+/*The list itself but not the content*/
+.sub-menu-content {
+  background-color: #fff;
+  float: left;            
+} 
+
+nav ul ul {
+  width: 175px;
+  position: fixed; /*Holds sublist in place*/
+  top: 70px;
+  display: none;
+  float: left;
+  text-align: left;
+  margin-left: -40px;
+}
+
+nav ul + ul a {
+  margin-top: 20px;
+}
+
+nav ul ul a {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+}
+
+/*This is hovering over any link*/
+nav li a:hover {
+  color: #6EFFEB;
+}
+
+.menu a {
+  transition: all 0.3s ease 0s;
+}
+
+
+/* Navigation */
+footer {
+  display: block;
+  position: static;
+  bottom: 0px;
+}
+
+footer:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+footer ul {
+  list-style: none;
+  margin-right: 50px;
+  position: relative;
+  margin-left: 10%;
+}
+
+.footer-top ul{
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.footer-bottom {
+  margin-top: 0px;
+}
+
+.footer-top {
+  background-color: white;
+  line-height: 30px;
+  min-width: 100%;
+  margin-top: auto;
+  width: 100vh;
+}
+
+img#socialMedia {
+  width: 250px;
+  float: right;
+  margin: 18.235px 0%;
+  background-color: white;
+  z-index: 1000;
+  position: absolute;
+  right: 20%;
+}
+
+.footer-bottom {
+  background-color: black;
+  position: absolute;
+  min-width: 100%;
+}
+
+footer .footer-bottom ul li { 
+  display: inline-block;
+  margin-right: 50px;
+  color: white;
+}
+
+footer .footer-bottom ul a {
+  color: white;
+}
+
+footer ul a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Libre Franklin';
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+/*This is hovering over any link*/
+footer li a:hover {
+  color: #6EFFEB;
+}
+
+footer a {
+  transition: all 0.3s ease 0s;
+}
+
+body {
+  font-family: Libre Franklin;
+  font-weight: 200;
+  margin: 0px;
+  min-height: 100vh;
+}
+
+/*All Resources Content*/
+
+div.ment-ill {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.ment-ill h1 {
+  font-size: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ment-ill h2 {
+  margin-top: 50px;
+  font-size: 24pt;
+  text-align: left;
+  font-weight: 400;
+}
+
+.ment-ill p, .ment-ill ul {
+  font-size: 14pt;
+  line-height: 35px;
+}
+
+.ment-ill a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ment-ill ul li {
+  margin: 10px auto auto;
+  padding-left: 25px;
+  display: list-item;
+}
+
+.ment-ill a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 4px 2px -2px white;
+        }
+        
+        nav {
+            background: white;
+        }
+
+        nav:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        nav ul {
+            list-style: none;
+            margin-right: 50px;
+            position: relative;
+        }
+
+        nav ul li { 
+            display: inline-block;
+            background: white;
+            margin: 0 50px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 50px;
+            font-size: 20px;
+            font-family: 'Libre Franklin';
+            padding: 5px 10px;
+            font-weight: 600;
+        }
+
+        /*The list itself but not the content*/
+        .sub-menu-content {
+            background-color: #fff;
+            float: left;            
+        } 
+
+        nav ul ul {
+            width: 200px;
+            position: fixed; /*Holds sublist in place*/
+            top: 70px;
+            display: none;
+            float: left;
+            text-align: left;
+            margin-left: -40px;
+        }
+
+        nav ul ul a { /*can use li before a*/
+            font-weight: 400;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul ul li {
+            position: relative;
+            margin: 0px;
+            width: 150px;
+            float: none;
+            display: list-item;
+        }
+
+        /* Navigation */
+        footer {
+        display: block;
+        position: sticky;
+        bottom: 0px;
+        border-collapse:collapse;
+        }
+
+        footer:after {
+        content: '';
+        clear: both;
+        display: table;
+        }
+
+        footer ul {
+        list-style: none;
+        margin-right: 50px;
+        position: relative;
+        margin-left: 10%;
+        }
+
+        .footer-bottom {
+        background-color: black;
+        flex-direction: column;
+        }
+
+        footer .footer-bottom ul li { 
+        display: inline-block;
+        margin-right: 50px;
+        color: white;
+        }
+
+        footer .footer-bottom ul a {
+        color: white;
+        }
+
+
+        footer ul a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 30px;
+        font-size: 14px;
+        font-family: 'Libre Franklin';
+        padding: 5px 10px;
+        font-weight: 600;
+        }
+
+        /*This is hovering over any link*/
+        footer li a:hover {
+        color: #80f8ff;
+        }
+
+        footer a {
+        transition: all 0.3s ease 0s;
+        }
+
+        body {
+        font-family: Libre Franklin;
+        font-weight: 200;
+        margin: 0;
+        }
+
+        /*This is hovering over any link*/
+        nav li a:hover {
+            color: #80f8ff;
+        }
+
+        .menu a {
+            transition: all 0.3s ease 0s;
+        }
+
+        body {
+            background-color: #eee
+        }
+
+
+        img#jpg {
+            width: 75px;
+            float: right;
+            margin: 0 20%;
+            background-color: white;
+            transform: rotate(-90deg);
+            z-index: 1000;
+        }
+        
+        img#socialMedia {
+            width: 250px;
+            float: right;
+            margin: 8.235px 0%;
+            background-color: white;
+            z-index: 1000;
+            position: absolute;
+            right: 20%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.htm"><img src="TalLogoColor.png"></a>
+        <nav>
+            <ul id="navBar" class="menu">
+                <li id="main-menu-item1" class="main-menu" >
+                    <a href="who_we_are.htm">Who We Are</a>
+                </li>
+                <li id="main-menu-item2" class="main-menu has-sub-menu"><a href="resources.htm">Resources</a>
+                    <ul id="sub-menu-resources" class="sub-menu-content">
+                        <a href="anxiety.htm">Anxiety</a>
+                        <li><a href="depression.htm">Depression</a></li>
+                        <li><a href="covid-19.htm">COVID-19</a></li>
+                        <li><a href="suicide.htm">Suicide</a></li>
+                    </ul>
+                </li>
+                <li id="main-menu-item3" class="main-menu has-sub-menu">
+                    <a href="join_us.htm">Join Us</a>
+                    <ul id="sub-menu-join-us" class="sub-menu-content">
+                        <li><a href="ambassadors.htm">Ambassadors</a></li>
+                        <li><a href="partnerships.htm">Partnerships</a></li>
+                    </ul>
+                </li> 
+            </ul>
+        </nav>
+    </header>
+
+<div style="height: 100vh;"></div>
+
+    
+    <footer>
+        
+        <div class="footer-top">
+            <div id="socialMedia">
+                <img id="socialMedia" src="media.png" alt="Social Media" usemap="#social">
+                        <map name="social" style="position: absolute;">
+                            <area shape="circle" coords="36.6625,36.6625,36.6625" alt="Facebook" href="https://www.facebook.com/TheTalApp/">
+                            <area shape="circle" coords="125,36.6625,36.6625" alt="Instagram" href="https://www.instagram.com/thetalapp/?hl=en">
+                            <area shape="circle" coords="213.3375,36.6625,36.6625" alt="LinkedIn" href="https://www.linkedin.com/company/the-tal-app/">
+                        </map>
+            </div>            
+            <ul>
+                <li><a href="about_the_founders.htm">About the Founders</a></li>
+                <li><a href="contact_us.htm">Contact Us</a></li>
+                <li><a href="credits.htm">Credits</a></li>
+            </ul>
+            
+        </div>
+
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="terms_and_conditions.htm">Terms & Conditions</a></li>
+                <li><a href="privacy_policy.htm">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

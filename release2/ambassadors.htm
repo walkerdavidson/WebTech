@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="description" content="Sign up to be a Tal Ambassador today by filling out the form!"/>
+    <meta name="keywords" content="mental health ambassador, mental health internships, tal job, tal internship, tal ambassador"/>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" >
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #0089fa;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            margin-left: 10%;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        #ambassador {
+            width: 60%;
+            margin: 0 auto;
+            background-color: white;
+            height: 100%;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            padding-right: 1%;
+        }
+
+        label {
+            margin-left: 10%;
+            font-size: 18px;
+        }
+
+        input {
+            line-height: 40px;
+            padding: 0px 0px 0px 10px;
+        }
+
+        input:not([type="checkbox"]), select {
+            width: 80%;
+            margin: 3px 10% 20px 10%;
+            align-items: center;
+            border: 2px solid #555;
+            border-radius: 2px;
+            font-size: 16px;
+            background-color:white;
+        }
+
+        select {
+            height: 42.5px;
+            font-family: 'Libre Franklin';            
+        }
+
+        #address-city {
+            width: 32%;
+            margin-right: 2%;
+            margin-left: 10%;
+        }
+        #address-state {
+            width: 25%;
+            margin-right: 2%;
+            margin-left: 0;
+        }
+        #address-zip {
+            width: 16.75%;
+            margin-right: 5%;
+            margin-left: 0;
+        }
+
+        label.no-marg {
+            margin: 0;
+        }
+
+        div#check {
+            font-size: 16px;
+            line-height: 24px;
+            margin: auto 10%;
+        }
+
+        input[type="checkbox"] {
+            text-align: left;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        input[type="submit"] {
+            color: #0089fa;
+            width: 25%;
+            margin: 15px 37.5%;
+            padding: 0;
+            text-transform: uppercase;
+        }
+        
+        input[type="submit"]:hover {
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header style="position:static;">
+        <a href="index.htm"><img src="TalLogoColor.png" alt=""></a>
+        <nav>
+            <ul id="navBar" class="menu">
+                <li id="main-menu-item1" class="main-menu" >
+                    <a href="who_we_are.htm">Who We Are</a>
+                </li>
+                <li id="main-menu-item2" class="main-menu has-sub-menu"><a href="resources.htm">Resources</a>
+                    <ul id="sub-menu-resources" class="sub-menu-content">
+                        <li><a href="anxiety.htm">Anxiety</a></li>
+                        <li><a href="depression.htm">Depression</a></li>
+                        <li><a href="covid-19.htm">COVID-19</a></li>
+                        <li><a href="suicide.htm">Suicide</a></li>
+                    </ul>
+                </li>
+                <li id="main-menu-item3" class="main-menu has-sub-menu">
+                    <a href="join_us.htm">Join Us</a>
+                    <ul id="sub-menu-join-us" class="sub-menu-content">
+                        <li><a href="ambassadors.htm">Ambassadors</a></li>
+                        <li><a href="partnerships.htm">Partnerships</a></li>
+                    </ul>
+                </li> 
+            </ul>
+        </nav>
+    </header> 
+
+    <h1 class="head"> Become a Tal Ambassador! </h1>
+      
+    
+    <form id="ambassador" method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
+    <p class="head">Fill out the form below to sign up to become an Ambassador</p>
+    <div id="fname" class="formQ"> 
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+    </div>
+    <div id="lname" class="formQ">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+    </div>
+    <div id="emailAdd" class="formQ">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div id="phoneN" class="formQ">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+    </div>
+    <div id="homeAddress" class="formQ">
+        <label for="address-1">Address:</label>
+        <input type="text" id="address-1" name="address" placeholder="Street Address">
+        <label for="address-2"></label>
+        <input type="text" id="address-2" name="address" placeholder="Address Line 2">
+        <label for="address-city" class="no-marg"></label>
+        <input type="text" id="address-city" name="address" placeholder="City">
+        <label for="address-state" class="no-marg"></label>
+        <select id="address-state" name="address">   
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA" selected="selected">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+        </select>
+        <label for="address-zip" class="no-marg"></label>
+        <input type="text" id="address-zip" name="address" placeholder="Zip Code">
+    </div>
+    <div id="check">
+        <input type="checkbox" name="consent" value="consent"> I consent to receiving emails and other marketing materials from The Tal App.
+    </div>
+    <input type="submit" class="form-b">
+    
+
+    </form>
+    
+    <footer>
+        
+        <div class="footer-top">
+            <div id="sm">
+                <img id="socialMedia" src="media.png" alt="Social Media" usemap="#social">
+                        <map name="social" style="position: absolute;">
+                            <area shape="circle" coords="37,37,37" alt="Facebook" href="https://www.facebook.com/TheTalApp/">
+                            <area shape="circle" coords="125,37,37" alt="Instagram" href="https://www.instagram.com/thetalapp/?hl=en">
+                            <area shape="circle" coords="213,37,37" alt="LinkedIn" href="https://www.linkedin.com/company/the-tal-app/">
+                        </map>
+            </div>            
+            <ul>
+                <li><a href="about_the_founders.htm">About the Founders</a></li>
+                <li><a href="contact_us.htm">Contact Us</a></li>
+                <li><a href="credits.htm">Credits</a></li>
+            </ul>
+            
+        </div>
+
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="terms_and_conditions.htm">Terms & Conditions</a></li>
+                <li><a href="privacy_policy.htm">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

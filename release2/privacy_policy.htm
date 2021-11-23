@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="See Tal's Privacy Policy"/>
+    <meta name="keywords" content="tal privacy policy, tal legal, tal support, support tal"/>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <title>Privacy Policy</title>
+    <style>
+        #sideBar {
+            height: 100%;
+            float: left;
+            width: 200px;
+            margin-left: 5%;
+        }
+
+        #sideBar a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #8F68FF;
+        }
+
+        #sideBar a:hover {
+            text-decoration: underline;
+        }
+
+        .list li {
+            list-style: none;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .pp {
+            margin-left: 25%;
+            margin-right: 10%;
+        }
+
+        .pp p {
+            line-height: 30px;
+        }
+
+        ul {
+            line-height: 200%;
+        }
+
+        span {
+            font-size: 20px;
+        }
+
+        h3:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var timer = null
+        
+        function startAnimation()
+		{
+            if (document.getElementById("mode").innerHTML=="Switch to Dark Mode") {timer = setInterval("darkMode()", 5);}
+            else if (document.getElementById("mode").innerHTML=="Switch to Light Mode") { timer = setInterval("lightMode()", 5)}
+		}
+
+		function stopAnimation() 
+		{
+			if (!timer) return false;
+			clearInterval(timer);
+			timer = null;
+            if (document.getElementById("mode").innerHTML=="Switch to Dark Mode") {
+                var r = 255
+                var g = 255
+                var b = 255
+                var pr = 0
+                var pg = 0
+                var pb = 0
+                }}
+
+            var r = 255
+            var g = 255
+            var b = 255
+            var pr = 0
+            var pg = 0
+            var pb = 0
+    
+        function darkMode()
+        {
+            r=r-5
+            g=g-5
+            b=b-5
+            pr=pr+5
+            pg=pg+5
+            pb=pb+5
+            document.querySelector("body").style.backgroundColor = 'rgb(' + r + ','+ g + ',' + b +')';
+            document.querySelector("body").style.color = 'rgb(' + pr + ','+ pg + ',' + pb +')';
+            if (r+g+b==0)
+            {
+                stopAnimation()
+                document.getElementById("mode").innerHTML = "Switch to Light Mode"
+            }
+        }
+
+        function lightMode()
+        {
+            r=r+5
+            g=g+5
+            b=b+5
+            pr=pr-5
+            pg=pg-5
+            pb=pb-5
+            document.querySelector("body").style.backgroundColor = 'rgb(' + r + ','+ g + ',' + b +')';
+            document.querySelector("body").style.color = 'rgb(' + pr + ','+ pg + ',' + pb +')';
+            if (r+g+b==(255*3))
+            {
+                stopAnimation()
+                document.getElementById("mode").innerHTML = "Switch to Dark Mode"
+            }
+        }
+    
+    </script>
+</head>
+<body>
+       <!--Nav-->
+    <header>
+        <a href="index.htm"><img src="TalLogoColor.png" alt=""></a>
+        <nav>
+            <ul id="navBar" class="menu">
+                <li id="main-menu-item1" class="main-menu" >
+                    <a href="who_we_are.htm">Who We Are</a>
+                </li>
+                <li id="main-menu-item2" class="main-menu has-sub-menu"><a href="resources.htm">Resources</a>
+                    <ul id="sub-menu-resources" class="sub-menu-content">
+                        <li><a href="anxiety.htm">Anxiety</a></li>
+                        <li><a href="depression.htm">Depression</a></li>
+                        <li><a href="covid-19.htm">COVID-19</a></li>
+                        <li><a href="suicide.htm">Suicide</a></li>
+                    </ul>
+                </li>
+                <li id="main-menu-item3" class="main-menu has-sub-menu">
+                    <a href="join_us.htm">Join Us</a>
+                    <ul id="sub-menu-join-us" class="sub-menu-content">
+                        <li><a href="ambassadors.htm">Ambassadors</a></li>
+                        <li><a href="partnerships.htm">Partnerships</a></li>
+                    </ul>
+                </li> 
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="pp">Privacy Policy</h1>
+    
+    <ul id="sideBar" class="list">
+        <li><a href="#1">Public Information</a></li>
+        <li><a href="#2">Personal Information</a></li>
+        <li><a href="#3">Children Policy</a></li>
+        <li><a href="#4">Collection of Personal Information</a></li>
+        <li><a href="#5">Sharing Information</a></li>
+        <li><a href="#6">Cross Border Transfers</a></li>
+        <li><a href="#7">security</a></li>
+        <li><a href="#8">Outside Information</a></li>
+        <li><a href="#9">Accessing Information</a></li>
+        <li><a href="#10">Changing or Deleting Information</a></li>
+        <li><a href="#11">Timeline of Information</a></li>
+        <li><a href="#12">Changes to Privacy Policy</a></li>
+        <li><a href="#13">Additional Questions</a></li>
+    </ul>    
+    <div class="pp">
+
+        <p style="margin-left: 0;">
+            Tal is an anonymous mental health app. It instantly connects people and lets them express their feelings. Any registered user can post, which is a message that is public by default. It is important to note that what you post on the Site may be viewed by anyone, anywhere instantly. <br>
+            The Tal App, LLC. (Tal, we, us, our) is the owner and operator of the website www.thetalapp.com and associated application for use on mobile devices (together referred to as Site). By using the Site you agree to use the Site subject to the Terms and Conditions and this Privacy Policy. 
+
+        </p>
+
+        <h3 id="1">1. Public Information</h3>
+        <p>
+            You acknowledge that when you post content on the Site, you are requesting us to make that content public. This public information includes not only your posts, but also the metadata provided with the vents, (such as when and where you posted), as well as the people you support on the Site, and the posts you respond to and many other bits of information that result from your use of the Site. <br>
+            We make all of this public information public until you choose to delete it from the Site.
+        </p>
+        <h3 id="2">2. Personal Information</h3>
+        <p>
+            This Privacy Policy describes how and when we collect and use personally identifiable information provided by users of the Site (you), which may include, but is not limited to, your username, email address, avatar and other like information (Personal Information). It also describes the choices available to you regarding our use of your Personal Information and how you can access and update this information. <br>
+            This policy covers any Personal Information collected or received by us as a result of your use of the Site, in relation to any posts you make and your use of any of our services or products. <br>
+            Although we will not make your Personal Information publicly available except  in accordance with this policy, you can limit the amount of Personal Information you provide by registering an account on the Site using an email address which is not linked to your other social media accounts. You may wish to create an email account with an email provider that does not require Personal Information in order to register, such as Hotmail or Gmail.
+        </p>
+        <h3 id="3">3. Our Policy Towards Children</h3>
+        <p>
+            Our services and use of the Site are not available to persons under 13 without the prior consent of their legal guardian.<br>
+            If you are a legal guardian and you become aware that your child has provided us with Personal Information without your consent, please contact us at help@thetalapp.com. We do not knowingly collect Personal Information from children under 13. If we become aware that a child under 13 has provided us with Personal Information, we will take steps to remove that Personal Information and to terminate the child’s account.
+        </p>
+        <h3 id="4">4. Collection and Use of Personal Information</h3>
+        <p>
+            Tal may collect your Personal Information when: </p>
+	        <ul>
+                <li>you register as a user of the Site or any of our services; and </li>
+	            <li>you visit a page of the Site;</li>
+            </ul>
+            <p>We collect the following Personal Information from you: </p>
+	        <ul>
+                <li>your email address and username and</li>
+	            <li>information about your device such as your IP address and operating system.</li>
+            </ul>
+            <p>We collect this Personal Information to provide our services to you. We may also use Personal Information for related purposes such as: </p>
+            <ul>	
+                <li>to communicate with you;</li>
+                <li>provide services you require and provide requested information;</li>
+                <li>to perform statistical analyses of user behavior;</li>
+                <li>maintaining our relationship with you, including responding to your questions;</li>
+                <li>internal accounting and administration;</li>
+                <li>protecting you and ourselves from fraud; and</li>
+                <li>any other use for which we obtain your permission.</li>
+            </ul>
+            <p>We will not use your Personal Information for direct marketing purposes or for any other purpose without your approval.<br>
+            We may also obtain unsolicited Personal Information from you. This may happen when: </p>
+            <ul>
+                <li>you post containing Personal Information on our Site; or</li>
+                <li>you interact with other users of the Site, including following those users, responding to posts on the Site and other like interactions, in a manner which discloses your Personal Information.</li>
+            </ul>
+            <p>This is not Personal Information that we solicit from you, but in posting it on the Site is may become visible to other users and will be stored on our servers. We will not make any secondary use of unsolicited Personal Information.</p>
+        <h3 id="5">5. Sharing Your Information</h3>
+        <p>
+            Tal recognizes the trust you place in us when you give us your Personal Information. Other than disclosure as directed by you or to service providers (described below) or as required by law (for example, disclosure to various Government departments or courts), our policy is that we do not give your Personal Information to other organizations unless you have given us your consent to do so.
+            By using the Site, you consent to us sharing or disclosing your Personal Information in the ways set out in this policy. <br>
+            We may share your Personal Information with certain third parties, such as the providers of the electronic systems we use to collect and store your Personal Information and other service providers we use to help us to run aspects of our business efficiently, including offshore servers. Occasionally Tal might also use your Personal Information for other purposes or share your information with another organization because:</p>
+            <ul>
+                <li>we believe it is necessary to provide you with a service which you have requested;</li>
+                <li>we believe it is necessary to protect the rights, property or personal safety of other users of the Site;</li>
+                <li>we believe it is necessary to do so to prevent or help detect fraud or serious credit infringements – for example, we may share information with other credit reporting agencies, law enforcement agencies and fraud protection units;</li>
+                <li>we believe it is necessary to protect the interests of Vent – for example, disclosure to a court in the event of legal action to which Vent is a party; or</li>
+                <li>the assets and operations of the business are being transferred to another party as a going concern.</li>
+            </ul>
+            <p>When we share information with other organizations and service providers as set out above, we do so in accordance with the Privacy Policy. To the extent that these organizations and service providers gain access to your Personal Information, they are covered by strict privacy rules that prevent them from keeping this information or using this information for any purpose. We will not share your personal information with any third party organizations for marketing purposes.</p> 
+        <h3 id="6">6. Cross Border Transfers</h3>
+        <p>
+            Information that Tal collects may be stored and processed in and transferred between any of the countries in which the Company operates to enable to use of the information in accordance with this policy, including the USA. In addition, Public Information that you submit for publication on the Site will be published on the internet and may be available around the world. By using the Site and Tal’s services you agree to such cross-border transfers of your Personal Information.
+        </p>
+        <h3 id="7">7. Security</h3>
+        <p>
+            The security of your personal information is important to us. We endeavor to take all reasonable steps to keep your Personal Information secure. We store this information on secure cloud-based servers using Amazon’s AWS technology that are based in the USA in protected access-controlled facilities. Once it is stored on our servers, only authorized users can access your Personal Information, and access is only for approved purposes. <br>
+            Tal is not responsible for any third-party access to your Personal Information as a result of: </p>
+            <ul> <li>interception while it is in transit over the internet;
+            <li>spyware or viruses on the device (such as a computer or phone) from which you access the Site or post;
+            <li>your failure to adequately protect your membership username or password;
+            <li>or any losses, expenses, damages, including legal fees, resulting from such access. </li> </ul>
+            <p>We enable you to create an account, and share messages with others within your network and others who use the Site. We cannot control the actions of others with whom you may choose to share your information. Also we cannot guarantee that the content you post on our site will not be viewed by others outside your network or those who are not registered users of the Site.<br>
+            If you have any questions about security on our Web site, you can contact us at help@thetalapp.com.</p>
+        <h3 id="8">8. Providing Information on Other Sites</h3>
+        <p>
+            The Site provides links to some other sites outside of the Site. Sometimes other sites – such as other social networking sites – link back to the Site. These linked Sites are not under our control, so we are not responsible for the conduct of companies linked to our Site. Before you enter information on those sites, you should look at their privacy policy and terms and conditions of use.
+        </p>
+        <h3 id="9">9. Accessing Information We Keep About You</h3>
+        <p>
+            You can access your Personal Information we hold about you at any time. Simply contact us to make your request at help@thetalapp.com. <br>
+            We will always endeavor to meet your request for access. However, in some circumstances we may decline a request for access. This includes the following circumstances:</p>
+            <ul>
+                <li>we no longer hold or use the information;
+                <li>providing access would have an unreasonable impact on the privacy of other persons;
+                <li>the request is frivolous or vexatious;
+                <li>this information relates to existing or anticipated legal proceedings and would not normally be disclosed as part of those proceedings;
+                <li>providing access would be unlawful;
+                <li>providing access would be likely to prejudice the detection, prevention, investigation and prosecution of possible unlawful activity; and
+                <li>the information would reveal our commercially sensitive decision-making process.</li>
+            </ul>
+            <p>If we decline your request for access, we will give you reasons for our decision when we respond to your request. <br>
+            We reserve the right to charge you a reasonable fee for access to some types of information. These charges will be limited to the cost of recouping our expenses for providing you with information. For example, document retrieval, labor, and delivery to you. We will not charge you to make a request to access your information. <br>
+            Despite anything contained in this Policy to the contrary, the Freedom of Information Act 1982 continues to apply to any Personal Information held by us. The access and correction requirements in the Privacy Act 1988 operate alongside and do not replace other informal or legal procedures by which an individual can be provided access to, or correction of, their Personal Information.
+        </p>
+        <h3 id="10">10. Changing or Deleting Information</h3>
+        <p>
+            To provide you with the best possible service, it is important that the information we hold about you is accurate. We will take all reasonable steps to ensure that your Personal Information is accurate, complete and up-to-date at the time of collecting, using or disclosing the information. <br>
+            If you believe that any information we hold about you is inaccurate, incomplete or out-of-date, you should notify us. We will do our best to correct or delete it, unless we need to keep it for legal reasons.
+
+        </p>
+        <h3 id="11">11. How Long We Keep Your Personal Information</h3>
+        <p>
+            We will keep your Personal Information for as long as it is required to provide you with our services according to the Terms and Conditions and to comply with legal requirements. If we no longer require your Personal Information for any purpose, including legal purposes, we will take reasonable steps to securely destroy or permanently de-identify your Personal Information.
+        </p>
+        <h3 id="12">12. Changes to the Privacy Policy</h3>
+        <p>
+            We may update this Privacy Policy to reflect changes to our information practices from time to time. Tal reserves the right to change this Privacy Policy at any time and notify you by posting an updated version of the policy on the Site.<br>
+            We encourage you to periodically review this page for the latest information on our privacy practices. By continuing to access or use Tal after those changes become effective, you agree to be bound by the revised Privacy Policy.
+
+        </p>
+        <h3 id="13">13. Additional Questions</h3>
+        <p>
+            If you have any further queries relating to our Privacy Policy, or you have a concern, please contact us at help@thetalapp.com. If Tal becomes aware of any ongoing concerns or problems with your Personal Information, we will take these issues seriously and work to address those concerns within a reasonable time.
+        </p>
+        <h4 id="mode" onclick=startAnimation()>Switch to Dark Mode</h4>
+    </div>
+
+    <footer>
+        
+        <div class="footer-top">
+            <div id="sm">
+                <img id="socialMedia" src="media.png" alt="Social Media" usemap="#social">
+                        <map name="social" style="position: absolute;">
+                            <area shape="circle" coords="37,37,37" alt="Facebook" href="https://www.facebook.com/TheTalApp/">
+                            <area shape="circle" coords="125,37,37" alt="Instagram" href="https://www.instagram.com/thetalapp/?hl=en">
+                            <area shape="circle" coords="213,37,37" alt="LinkedIn" href="https://www.linkedin.com/company/the-tal-app/">
+                        </map>
+            </div>            
+            <ul>
+                <li><a href="about_the_founders.htm">About the Founders</a></li>
+                <li><a href="contact_us.htm">Contact Us</a></li>
+                <li><a href="credits.htm">Credits</a></li>
+            </ul>
+            
+        </div>
+
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="terms_and_conditions.htm">Terms & Conditions</a></li>
+                <li><a href="privacy_policy.htm">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
