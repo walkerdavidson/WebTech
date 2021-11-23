@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
     <meta name="description" content="Tal is the new, anonymous mental health app made so that you always have someone to talk to."/>
     <meta name="keywords" content="Tal, The Tal App, anonymous mental health app, mental health, talk to someone, someone to talk to, talk, anonymous app"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,6 +99,7 @@
             text-transform: uppercase;
             overflow: hidden;
             top: 40%;
+            left:45%;
             text-decoration: underline 2px;
         }
 
@@ -111,7 +111,6 @@
             image-rendering: -webkit-optimize-contrast;
             image-rendering: auto;
             image-rendering: crisp-edges;
-            image-rendering: rasterize;
             width:75%;
             top: 45%;
         }
@@ -201,14 +200,6 @@
 
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script>
-
-        function check()
-        {
-            if (document.getElementById("logo").style.width = '75%')
-            {
-                hint()
-            }
-        }     
         
         function hint()
         {
@@ -219,7 +210,7 @@
 
         function startAnimation()
 		{
-			if (!timer) timer = setInterval("check()", 1000)
+			if (!timer) timer = setInterval("hint()", 2000)
 		}
 
 		function stopAnimation() 
@@ -256,7 +247,7 @@
 
 <header>
     <nav>
-        <img id="hamburger" src="menu.png" onclick=openMenu()>
+        <img id="hamburger" src="menu.png" onclick=openMenu() alt="menu">
         <ul id="navBar" class="menu">
             <li id="main-menu-item1" class="main-menu" >
                 <a href="who_we_are.htm">Who We Are</a>
