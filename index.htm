@@ -1,101 +1,47 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Case</title> 
-  <!--  Bootstrap2.htm -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <style>
-    div.container img {
-      width: 200px;
-      height: 200px;
-    }
-  </style>
+<!DOCTYPE html>
 
-  <script src="https://code.jquery.com/jquery.min.js"></script>
-  <script>
-    $(function(){
-      $("#1").text("This is paragraph #1")
-      $("#img1").click(function(){
-        $(this).attr("src", "PinkBlueTalLogo.png")
-      })
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment 3 Home Page</title>
+
+	<style>
+	/* Your styles go here */
+	
+	ul {text-align:center}
+	li {display:inline; margin-left:20px}
+	img {width:80px; margin-top:30px}
+	p, li {font-size:18pt}
+	@media (max-width: 800px)
+	{
+		img {width: 40%}
+		ul {text-align: left;}
+		li {display: block; margin-left:20px;}
+		p {font-size: medium}
+		h1{text-align:center; color:indigo}
+	}
+	
+	</style>
     
-    
-    
-    })
+  </head>
 
-  </script>
+  <body>
+	<img id="logo" src="elephant.jpg" alt="Elephant_logo" />
+	<div id="nav">
+		<ul>
+			<li><a href="page2.htm">Page 2</a></li>
+			<li><a href="page3.htm">Page3</a></li>
+			<li><a href="http://www.babson.edu">Babson</a></li>
+		</ul>
+	</div>
+	<h1>The Truth About Elephants</h1>
+	<p>It's hard to tell what goes through a baby elephant's mind when its mom is trying to put it to sleep. Do you think baby elephants wake up in the middle of the night and cry? Do their moms and dads take turns getting up with them to rock them back to sleep? How do you rock an elephant, anyway?
+      </p><p>
+And what about gorillas? Today in the paper there's a story about a new gorilla that was just born in Franklin Park. Its mom is holding on to it just like any proud human mom. And I have to wonder if they go through as much trauma as that human mom when it comes to sleep, and food, and diapers, and running into the street.
 
-</head>
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
-      </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Page 1-1</a></li>
-              <li><a href="#">Page 1-2</a></li>
-              <li><a href="#">Page 1-3</a></li>
-            </ul>
-          </li>
-          <li><a href="http://www.babson.edu">Babson</a></li>
-          <li><a href="http://www.amazon.com">Amazon</a></li>
-        </ul>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="jumbotron">  
-      <h1>My first Bootstrap website!</h1>
-      <p>This is going to be a subtitle </p>
-    </div>
-      <div class="row">  
-        <div class="col-sm-3" style="background-color: red">
-          <p id="1">This is first paragragh.</p>
-          <p>This is second paragraph.</p>
-        </div>
-        <div class="col-sm-5" style="background-color: blue">
-          <p>This is third paragraph.</p>
-          <p>This is fourth paragraph.</p>
-        </div>
-        <div class="col-sm-4" style="background-color: gold">
-          <p>This is fifth paragraph.</p>
-        </div>
-      </div>
-      <div class="row">  
-        <div class="col-sm-6" style="background-color: orange">
-          <p>This is sixth paragragh.</p>
-          <p>This is seventh paragraph.</p>
-        </div>
-        <div class="col-sm-3" style="background-color: cyan">
-          <p>This is eighth paragraph.</p>
-          <p>This is ninth paragraph.</p>
-        </div>
-        <div class="col-sm-3" style="background-color: yellow">
-          <p>This is tenth paragraph.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4" style="background-color: salmon;">
-          <img id="img1" src="GreenBlueTalLogo.png" alt="logo">
-        </div>
-        <div class="col-sm-4" style="background-color: silver;">
-          <img id="img2" src="PinkBlueTalLogo.png" alt="logo">
-        </div>
-        <div class="col-sm-4" style="background-color: green;">
-          <img src="YellowGreenTalLogo.png" alt="logo">
-        </div>
-      </div>
-  </div>
-
+</p>
+<p>I, Walker Davidson, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work.</p>  
 </body>
 </html>
